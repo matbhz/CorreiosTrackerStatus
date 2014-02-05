@@ -1,15 +1,16 @@
 require 'rest-client'
 require 'nokogiri'
+require 'json'
 
 module Correios
 
   POST_URL = "http://websro.correios.com.br/sro_bin/txect01$.QueryList"
-  PARAMS = "P_ITEMCODE=&P_LINGUA=001&P_TESTE=&P_TIPO=001&P_COD_UNI=%%tracker_no%%&Z_ACTION=Search"
 
   def self.get tracker_no
 
-    PARAMS["%%tracker_no%%"] = tracker_no
-    response = RestClient.post POST_URL, PARAMS
+    params = "P_ITEMCODE=&P_LINGUA=001&P_TESTE=&P_TIPO=001&P_COD_UNI=#{tracker_no}Z_ACTION=Search"
+
+    response = RestClient.post POST_URL, params
     details_table = Nokogiri::HTML(response).xpath("//table//following::tr[2]")
 
     json_response = {:tracker_no => tracker_no, :info => []}
