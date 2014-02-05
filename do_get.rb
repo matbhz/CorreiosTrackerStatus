@@ -3,50 +3,40 @@ require 'open-uri'
 require 'nokogiri'
 
 
-class DoGet
+module Correios
 
 
   POST_URL = "http://websro.correios.com.br/sro_bin/txect01$.QueryList"
   TRACKER_NO = "RB489735409HK"
   PARAMS = "P_ITEMCODE=&P_LINGUA=001&P_TESTE=&P_TIPO=001&P_COD_UNI=#{TRACKER_NO}&Z_ACTION=Search"
 
-  LOCATION_COLUMNS = 3
 
   response = RestClient.post POST_URL, PARAMS
 
-  details_table = Nokogiri::HTML(response).xpath("//table")
+  details_table = Nokogiri::HTML(response).xpath("//table//following::tr[2]")
 
-  json_response = {}
+  json_response = { :tracker_no => TRACKER_NO, :info => [] }
 
-  details_table.xpath("//following::tr[2]").each do |row|
+  details_table.each do |row|
 
     columns = row.children
-    if columns.size == LOCATION_COLUMNS
-
+    if columns.size == 3
 
       date = columns[0].text
       location = columns[1].text
       situation = columns[2].text
 
-
-      p "Data: #{date} | Local: #{location} | Situação: #{situation}"
+      json_response[:info] << { :date => date, :location => location, :situation => situation}
 
     else
       details = columns[0].text
 
-      p "Detalhe: #{details}"
+      json_response[:info] << {:details => details}
 
     end
 
   end
 
-
-=begin
- 0 - Headers Data/Local/Situação
- 1..x - Cada atualização + Situação
-    0 - Local
-    1 - detalhes
-
-=end
+  json_response.to_json
 
 end

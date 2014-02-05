@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3a72d3e4-6cce-4252-a337-30f5544202e6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/do_get.rb" afterPath="$PROJECT_DIR$/do_get.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CorreiosTrackerWebCrawler.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/do_get.rb" changelist="3a72d3e4-6cce-4252-a337-30f5544202e6" time="1391558341475" ignored="false" />
+    <file path="/do_get.rb" changelist="3a72d3e4-6cce-4252-a337-30f5544202e6" time="1391560408006" ignored="false" />
     <file path="/Dummy.txt" changelist="3a72d3e4-6cce-4252-a337-30f5544202e6" time="1391556576121" ignored="false" />
     <file path="/websro.gemspec" changelist="3a72d3e4-6cce-4252-a337-30f5544202e6" time="1391555915187" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,7 +35,7 @@
       <file leaf-file-name="do_get.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/do_get.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="17" selection-start="788" selection-end="788" vertical-scroll-proportion="0.7865854">
+            <state line="39" column="23" selection-start="882" selection-end="882" vertical-scroll-proportion="0.75609756">
               <folding />
             </state>
           </provider>
@@ -320,7 +321,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33075932" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33075932" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -416,7 +417,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/do_get.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="17" selection-start="788" selection-end="788" vertical-scroll-proportion="0.7865854">
+        <state line="39" column="23" selection-start="882" selection-end="882" vertical-scroll-proportion="0.75609756">
           <folding />
         </state>
       </provider>
