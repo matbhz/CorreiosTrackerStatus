@@ -20,14 +20,10 @@ module Correios
       columns = row.children
       if columns.size == 3
         info = {}
-        date = columns[0].text
-        location = columns[1].text
-        situation = columns[2].text
-        info = {:date => date, :location => location, :situation => situation}
+        info = {:date => columns[0].text, :location => columns[1].text, :situation => columns[2].text}
         json_response[:info].push info
       else
-        details = columns[0].text
-        info[:details] = details
+        info[:details] = columns[0].text
       end
     end
    json_response.to_json.split.join(" ")
