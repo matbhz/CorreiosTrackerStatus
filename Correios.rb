@@ -29,6 +29,6 @@ module Correios
         info[:details] = details
       end
     end
-    json_response.to_json
+    json_response.to_json.split.join(" ")
   end
 end
