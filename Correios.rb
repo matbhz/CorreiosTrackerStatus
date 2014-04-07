@@ -8,7 +8,7 @@ module Correios
 
   def self.get tracker_no
 
-    params = "P_ITEMCODE=&P_LINGUA=001&P_TESTE=&P_TIPO=001&P_COD_UNI=#{tracker_no}Z_ACTION=Search"
+    params = "P_ITEMCODE=&P_LINGUA=001&P_TESTE=&P_TIPO=001&P_COD_UNI=#{tracker_no}&Z_ACTION=Search"
 
     response = RestClient.post POST_URL, params
     details_table = Nokogiri::HTML(response).xpath("//table//following::tr[2]")
