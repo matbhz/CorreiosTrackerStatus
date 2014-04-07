@@ -15,10 +15,11 @@ module Correios
 
     json_response = {:tracker_no => tracker_no, :info => []}
 
+    info = {}
     details_table.each do |row|
-      info = {}
       columns = row.children
       if columns.size == 3
+        info = {}
         date = columns[0].text
         location = columns[1].text
         situation = columns[2].text
@@ -29,6 +30,7 @@ module Correios
         info[:details] = details
       end
     end
-    json_response.to_json.split.join(" ")
+   json_response.to_json.split.join(" ")
   end
+
 end
